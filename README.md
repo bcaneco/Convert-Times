@@ -1,4 +1,4 @@
-# Convert Times
+# Add Local and Solar Time
 
 MoveApps
 
