@@ -22,24 +22,23 @@ moveStack in Movebank format
 `data_wtime.csv`: csv file of the complete dataset with the local time information added, based on the selected settings. All timestamps are provided in the format `yyyy-MM-dd HH:mm:ss`. The sunrise, sunset, mean solar and true solar times are reported in UTC. The sunrise and sunset are provided for the sunrise and sunset between which the local timestamp falls. The local time components are based on the local time.
 
 ### Settings
-Local time (`local`): Checkbox to select if timestamps shall be converted to local times and added to the dataset. Defaults to FALSE.
+**Local time (`local`):** Checkbox to select if timestamps shall be converted to local times and added to the dataset. Defaults to FALSE.
 
-Local time details (`local_details`): Checkbox to select if time components of the converted local times shall be added to the dataset. Defaults to FALSE.
+**Local time details (`local_details`):** Checkbox to select if time components of the converted local times shall be added to the dataset. Defaults to FALSE.
 
-Sunrise and sunset (`sunriset`): Checkbox to select if the time of local sunrise and sunset shall be added to the dataset. Defaults to FALSE.
+**Sunrise and sunset (`sunriset`):** Checkbox to select if the time of local sunrise and sunset shall be added to the dataset. Defaults to FALSE.
 
-Mean solar time (`mean_solar`): Checkbox to select if timestamps shall be converted to mean solar time and added to the dataset. Defaults to FALSE.
+**Mean solar time (`mean_solar`):** Checkbox to select if timestamps shall be converted to mean solar time and added to the dataset. Defaults to FALSE.
 
-True solar time (`true_solar`): Checkbox to select if timestamps shall be converted to true solar time and added to the dataset. Defaults to FALSE.
+**True solar time (`true_solar`):** Checkbox to select if timestamps shall be converted to true solar time and added to the dataset. Defaults to FALSE.
 
 ### Null or error handling:
-**Parameter `local`:** The default value FALSE will lead to no local times being added to the dataset. NULL is not possible.
+**Local time (`local`):** The default value FALSE will lead to no local times being added to the dataset. NULL is not possible.
 
-**Parameter `local_detail`:** The default value FALSE will lead to no local time components being added to the dataset. NULL is not possible.
+**Local time details (`local_details`):** The default value FALSE will lead to no local time components being added to the dataset. NULL is not possible.
 
-**Parameter `mean_solar`:** The default value FALSE will lead to no mean solar time being added to the dataset. NULL is not possible.
+**Mean solar time (`mean_solar`):** The default value FALSE will lead to no mean solar time being added to the dataset. NULL is not possible.
 
-**Parameter `true_solar`:** The default value FALSE will lead to no true solar time being added to the dataset. NULL is not possible.
+**True solar time (`true_solar`):** The default value FALSE will lead to no true solar time being added to the dataset. NULL is not possible.
 
 **Data:** The input dataset is not changed, but possibly extended by some attributes. If no time conversions are requested, the input dataset is returned. It cannot be empty.
-
