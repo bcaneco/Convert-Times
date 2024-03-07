@@ -1,4 +1,7 @@
 {
-    "sdk": "MoveApps R SDK",
-    "year": 2004
+  "local": false,
+  "local_details": false,
+  "sunriset": false,
+  "mean_solar": false,
+  "true_solar": false
 }

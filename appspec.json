@@ -1,77 +1,126 @@
 {
-  "version": "1.2",
   "settings": [
-    {
-      "id": "sdk",
-      "name": "The name of the MoveApps SDK",
-      "description": "Showcase requesting a string input from the users of your app.",
-      "defaultValue": "MoveApps SDK",
-      "type": "STRING"
+      {
+      "id": "local",
+      "name": "Local time",
+      "description": "Select if you want to calculate and add local timezone (including daylight saving time where applicable) and local time to your dataset.",
+      "defaultValue": false,
+      "type": "CHECKBOX"
     },
-    {
-      "id": "year",
-      "name": "The year",
-      "description": "Insert description for the year setting setting",
-      "defaultValue": 2022,
-      "type": "INTEGER"
+	    {
+      "id": "local_details",
+      "name": "Local time details",
+      "description": "Select if you want to calculate and add the following details of the local timestamps to your dataset: date, time, year, month, Julian day, calendar week, weekday.",
+      "defaultValue": false,
+      "type": "CHECKBOX"
     },
-    {
-      "id": "yourLocalFileSettingId",
-      "name": "Personalization",
-      "description": "You can personalize the dashboard by providing a file named 'sample.txt'",
-      "type": "LOCAL_FILE"
+      {
+      "id": "sunriset",
+      "name": "Sunrise and sunset",
+      "description": "Select if you want to calculate and add the time of local sunrise and sunset.",
+      "defaultValue": false,
+      "type": "CHECKBOX"
+    },
+	    {
+      "id": "mean_solar",
+      "name": "Mean solar time",
+      "description": "Select if you want to calculate and add mean solar time to your dataset.",
+      "defaultValue": false,
+      "type": "CHECKBOX"
+    },
+	    {
+      "id": "true_solar",
+      "name": "True solar time",
+      "description": "Select if you want to calculate and add true solar time to your dataset.",
+      "defaultValue": false,
+      "type": "CHECKBOX"
     }
   ],
   "dependencies": {
     "R": [
       {
+        "name": "move2"
+      },
+      {
         "name": "lubridate"
       },
       {
-        "name": "move2"
+        "name": "lutz"
+      },
+      {
+        "name": "sf"
+      },
+      {
+        "name": "suncalc"
+      },
+      {
+        "name": "dplyr"
+      },
+      {
+        "name": "stringr"
+      },
+      {
+        "name": "readr"
       }
-    ]
+      ]
   },
-  "providedAppFiles": [
-    {
-      "settingId": "yourLocalFileSettingId",
-      "from": "data/local_app_files/provided-app-files/yourLocalFileSettingId/"
-    }
-  ],
+  "createsArtifacts": true,
   "license": {
     "key": "MIT"
   },
   "language": "eng",
   "keywords": [
-    "example",
-    "template"
+    "local time",
+    "solar time",
+    "weekday",
+	"month",
+	"true solar time",
+	"mean solar time",
+	"time components",
+	"sunrise",
+	"sunset",
+  "daylight saving"
   ],
   "people": [
     {
-      "firstName": "Charles",
+     "firstName": "Andrea",
       "middleInitials": null,
-      "lastName": "Darwin",
-      "email": "creator@example.com",
+      "lastName": "Kölzsch",
+      "email": "akoelzsch@ab.mpg.de",
       "roles": [
         "author",
         "creator"
       ],
+      "orcid": "0000-0003-0193-1563",
+      "affiliation": "Max-Planck-Institute of Animal Behavior",
+      "affiliationRor": "https://ror.org/026stee22"
+    },
+	{
+     "firstName": "Sarah",
+      "middleInitials": "C.",
+      "lastName": "Davidson",
+      "email": "sdavidson@ab.mpg.de",
+      "roles": [
+        "contributor"
+      ],
+      "orcid": "0000-0002-2766-9201",
+      "affiliation": "Max Planck Institute of Animal Behavior, The Ohio State University",
+      "affiliationRor": "https://ror.org/026stee22, https://ror.org/00rs6vg23",
+    },
+    {
+      "firstName": "Bruno",
+      "middleInitials": "",
+      "lastName": "Caneco",
+      "email": "bruno@dmpstats.co.uk",
+      "roles": [
+        "contributor"
+      ],
       "orcid": null,
-      "affiliation": null,
+      "affiliation": "DMP Statistical Solutions",
       "affiliationRor": null
     }
   ],
-  "funding": [
-    {
-      "name": "funder name",
-      "comment": "grant for App"
-    }
-  ],
-  "references": [
-    {
-      "type": "IsDescribedBy",
-      "note": "Darwin, C. 1900. The creation. Journal XY. 1-2",
-      "url": "https://anylink.xyz"
-    }
-  ]
+  "documentation": {
+    "url": "https://github.com/movestore/Convert-Times/blob/main/README.md"
+  }
 }
