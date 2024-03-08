@@ -7,8 +7,6 @@ library('dplyr')
 library('stringr')
 library('readr')
 
-`%notin%` <- Negate(`%in%`)
-
 rFunction <- function(data,
                       local=FALSE,
                       local_details=FALSE,
