@@ -30,6 +30,7 @@ test_that("Output complies with input selections", {
   expect_contains(names(out), c("sunrise_timestamp", "sunset_timestamp"))
   expect_false(any(c("timestamp_true_solar", "timestamp_mean_solar", "timestamp_local") %in% names(out)))
   
+  
   # local time details and mean solar timestamps
   out <- rFunction(data = input1, local_details = TRUE, mean_solar = TRUE)  
   expect_contains(names(out), c("timestamp_mean_solar", "yday", "weekday", "date", "local_tz"))

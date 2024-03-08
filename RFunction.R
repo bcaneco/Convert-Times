@@ -84,11 +84,7 @@ rFunction <- function(data,
       # add local timestamps
        data <- data |>
          dplyr::mutate(
-           timestamp_local = lubridate::with_tz(
-             .data[[tm_col_id]], 
-             ifelse(is.na(unique(local_tz)), "", unique(local_tz)) 
-           ),
-           #timestamp_local = lubridate::with_tz(.data[[tm_col_id]], unique(local_tz)),
+           timestamp_local = lubridate::with_tz(.data[[tm_col_id]], unique(local_tz)),
            .before = local_tz, 
            .by = local_tz
          ) 
