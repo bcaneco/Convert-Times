@@ -39,22 +39,30 @@
   "dependencies": {
     "R": [
       {
-        "name": "move"
+        "name": "move2"
       },
-	  {
+      {
         "name": "lubridate"
       },
-	  {
+      {
         "name": "lutz"
       },
-	  {
+      {
         "name": "sf"
       },
-	  ,
-	  {
-        "name": "maptools"
+      {
+        "name": "suncalc"
+      },
+      {
+        "name": "dplyr"
+      },
+      {
+        "name": "stringr"
+      },
+      {
+        "name": "readr"
       }
-    ]
+      ]
   },
   "createsArtifacts": true,
   "license": {
@@ -97,7 +105,19 @@
       ],
       "orcid": "0000-0002-2766-9201",
       "affiliation": "Max Planck Institute of Animal Behavior, The Ohio State University",
-      "affiliationRor": "https://ror.org/026stee22, https://ror.org/00rs6vg23",
+      "affiliationRor": "https://ror.org/026stee22, https://ror.org/00rs6vg23"
+    },
+    {
+      "firstName": "Bruno",
+      "middleInitials": "",
+      "lastName": "Caneco",
+      "email": "bruno@dmpstats.co.uk",
+      "roles": [
+        "contributor"
+      ],
+      "orcid": null,
+      "affiliation": "DMP Statistical Solutions",
+      "affiliationRor": null
     }
   ],
   "documentation": {
